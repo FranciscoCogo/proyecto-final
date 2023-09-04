@@ -1,0 +1,206 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/FONDODELAPAGINA.jpg"); /* Ruta de la imagen de fondo del body */
+  background-repeat: repeat; /* Hace que la imagen de fondo se repita en mosaico */
+  background-attachment: fixed;
+}
+
+header {
+  background-color: rgba(2, 3, 0, 0.7450980392);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: rgba(168, 22, 22, 0.5568627451);
+  font-size: 90px;
+  font-family: "Ledger", serif;
+  background-color: rgba(0, 0, 0, 0.768627451);
+  background-image: url(../); /* Ruta de la imagen de fondo para el h1 */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos para los botones en todas las páginas */
+.boton {
+  display: block;
+  width: 200px;
+  height: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px auto;
+  margin-bottom: 100px; /* Espacio adicional entre los botones */
+  border-radius: 5px;
+}
+
+/* Estilos para centrar los botones verticalmente */
+.botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px); /* Ajusta la altura para centrar verticalmente, restando la altura del encabezado (100px) */
+}
+
+.carrusel {
+  height: 70vh;
+  width: 90vw;
+  margin: 50px;
+  padding: 1rem;
+  display: flex;
+}
+
+.carrusel img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+
+.carrusel img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.parrafoindex {
+  background-image: url(../images/fondo2.jpg);
+  opacity: 0.9;
+  padding: 300px;
+  margin: 10px;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left:  auto;
+}
+
+.parrafoindex:hover {
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.parrafoinicio {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+footer {
+  color: #fff;
+  background: linear-gradient(#1d1c1c, #000000);
+  height: 80px;
+}
+
+.navbar {
+  background-image: linear-gradient(#000000, #181717, #000000, #000000);
+  list-style: none;
+  margin: 0px auto;
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.navbar li {
+  display: inline-block;
+  text-align: center;
+}
+
+.navbar li a {
+  padding: 20px;
+  margin: 10px;
+  color: #eeeeee;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.navbar li a:hover {
+  color: #ffffff;
+  background-image: linear-gradient(#1d1336, #fff);
+  border-radius: 30%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 100px;
+  margin: 10px;
+  padding: 10px;
+  width: 800px;
+}
+
+.card {
+  width: 450px;
+  display: grid;
+  margin-left: 760px;
+  padding: 1px;
+}
+
+.card-text {
+  color: rgb(0, 63, 118);
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, red, blue, green, deeppink, blue, red, deeppink);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+}
+
+.imagenes {
+  margin: 40px;
+}
+
+@media (max-width: 1055px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+    gap: 16px;
+    margin: 90px;
+    padding: 10px;
+    width: 200px;
+  }
+  .carrusel {
+    margin: 20px;
+  }
+  .parrafoindex {
+    overflow: auto;
+    text-overflow: ellipsis;
+    width: 375px;
+    height: 50px;
+    margin: 20px;
+    padding: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size:  20px;
+  }
+  .parrafoinicio {
+    font-size: 20px;
+  }
+  .imagenes {
+    width: 300px;
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
